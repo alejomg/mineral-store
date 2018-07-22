@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Mineral } from '../mineral';
 
 @Component({
   selector: 'app-mineral',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MineralComponent implements OnInit {
 
-	mineral = "Durangite";
+	mineral: Mineral = {
+		id: 1,
+		name: 'Durangite'
+	};
 
   constructor() { }
 
