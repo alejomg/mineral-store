@@ -5,3 +5,10 @@
 		<input [(ngModel)]="mineral.name" placeholder="name">
 	</label>
 </div>
+
+<h2>Minerals</h2>
+<ul class="minerals">
+	<li *ngFor="let mineral of minerals">
+		<span class="badge">{{mineral.id}}</span> {{mineral.name}}
+	</li>
+</ul>
