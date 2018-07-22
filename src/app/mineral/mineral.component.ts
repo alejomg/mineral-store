@@ -11,10 +11,16 @@ export class MineralComponent implements OnInit {
 
 	minerals = MINERALS;
 
-	mineral: Mineral = {
+	selectedMineral : Mineral;
+
+	onSelect(mineral: Mineral): void {
+		this.selectedMineral = mineral;
+	}
+
+	/*mineral: Mineral = {
 		id: 1,
 		name: 'Durangite'
-	};
+	};*/
 
   constructor() { }
 

@@ -1,14 +1,18 @@
-<h2>{{mineral.name | uppercase}} Details</h2>
-<div><span>id: </span>{{mineral.id}}</div>
-<div>
-	<label>name:
-		<input [(ngModel)]="mineral.name" placeholder="name">
-	</label>
-</div>
-
 <h2>Minerals</h2>
 <ul class="minerals">
-	<li *ngFor="let mineral of minerals">
+	<li *ngFor="let mineral of minerals" 
+		(click)="onSelect(mineral)" 
+		[class.selected]="mineral === selectedMineral">
 		<span class="badge">{{mineral.id}}</span> {{mineral.name}}
 	</li>
 </ul>
+
+<div *ngIf="selectedMineral">
+	<h2>{{selectedMineral.name | uppercase}} Details</h2>
+	<div><span>id: </span>{{selectedMineral.id}}</div>
+	<div>
+		<label>name:
+			<input [(ngModel)]="selectedMineral.name" placeholder="name">
+		</label>
+	</div>
+</div>
