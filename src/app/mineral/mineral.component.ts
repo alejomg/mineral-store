@@ -17,11 +17,6 @@ export class MineralComponent implements OnInit {
 		this.selectedMineral = mineral;
 	}
 
-	/*mineral: Mineral = {
-		id: 1,
-		name: 'Durangite'
-	};*/
-
   constructor() { }
 
   ngOnInit() {
