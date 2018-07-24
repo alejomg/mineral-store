@@ -11,9 +11,9 @@ export class MineralDetailComponent implements OnInit {
 
 	@Input() mineral: Mineral;
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }

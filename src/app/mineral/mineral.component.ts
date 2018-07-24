@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mineral } from '../mineral';
-import { MINERALS } from '../mineral-list';
+import { MineralService } from '../mineral.service';
 
 @Component({
   selector: 'app-mineral',
@@ -9,17 +9,22 @@ import { MINERALS } from '../mineral-list';
 })
 export class MineralComponent implements OnInit {
 
-	minerals = MINERALS;
+	minerals : Mineral[];
 
 	selectedMineral : Mineral;
+
+	constructor(private mineralService: MineralService) { }
+
+	ngOnInit() {
+		this.getMinerals();
+	}
 
 	onSelect(mineral: Mineral): void {
 		this.selectedMineral = mineral;
 	}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	getMinerals(): void {
+		this.minerals = this.mineralService.getMinerals();
+	}
 
 }
