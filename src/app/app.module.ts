@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms'; // <-- FormsModule isn't available
 import { AppComponent } from './app.component';
 import { MineralComponent } from './mineral/mineral.component';
 import { MineralDetailComponent } from './mineral-detail/mineral-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MineralComponent,
-    MineralDetailComponent
+    MineralDetailComponent,
+    MessagesComponent
   ],
   imports: [
 	BrowserModule,

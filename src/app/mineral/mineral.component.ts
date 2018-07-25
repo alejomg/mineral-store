@@ -23,15 +23,9 @@ export class MineralComponent implements OnInit {
 		this.selectedMineral = mineral;
 	}
 
-	/*
-	getMinerals(): void {
-		this.minerals = this.mineralService.getMinerals();
-	}
-	*/
-
 	getMinerals(): void {
 		this.mineralService.getMinerals().subscribe(
-			minerals => this.minerals = minerals
+			minerals => this.minerals = minerals;
 		);
 	}
 

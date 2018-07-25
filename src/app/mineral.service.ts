@@ -10,12 +10,6 @@ export class MineralService {
 
 	constructor() { }
 
-	/*
-	getMinerals(): Mineral[] {
-		return MINERALS;
-	}
-	*/
-
 	getMinerals(): Observable<Mineral[]> {
 		return of(MINERALS);
 	}
