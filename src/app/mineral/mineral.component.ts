@@ -11,16 +11,10 @@ export class MineralComponent implements OnInit {
 
 	minerals : Mineral[];
 
-	selectedMineral : Mineral;
-
 	constructor(private mineralService: MineralService) { }
 
 	ngOnInit() {
 		this.getMinerals();
-	}
-
-	onSelect(mineral: Mineral): void {
-		this.selectedMineral = mineral;
 	}
 
 	getMinerals(): void {

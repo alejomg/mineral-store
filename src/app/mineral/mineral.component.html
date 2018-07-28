@@ -1,10 +1,8 @@
 <h2>Minerals</h2>
 <ul class="minerals">
-	<li *ngFor="let mineral of minerals" 
-		(click)="onSelect(mineral)" 
-		[class.selected]="mineral === selectedMineral">
-		<span class="badge">{{mineral.id}}</span> {{mineral.name}}
+	<li *ngFor="let mineral of minerals">
+		<a routerLink="/detail/{{mineral.id}}">
+			<span class="badge">{{mineral.id}}</span> {{mineral.name}}
+		</a>
 	</li>
 </ul>
-
-<app-mineral-detail [mineral]="selectedMineral"></app-mineral-detail>

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { MineralService }  from '../mineral.service';
 import { Mineral } from '../mineral';
 
 @Component({
@@ -11,9 +13,22 @@ export class MineralDetailComponent implements OnInit {
 
 	@Input() mineral: Mineral;
 
-	constructor() { }
+	constructor(private route: ActivatedRoute, private mineralService: MineralService, 
+		private location: Location) { }
 
 	ngOnInit() {
+		this.getMineral();
+	}
+
+	getMineral(): void {
+		const id = +this.route.snapshot.paramMap.get('id');
+		this.mineralService.getMineral(id).subscribe(
+			mineral => this.mineral = mineral
+		);
+	}
+
+	goBack(): void {
+		this.location.back();
 	}
 
 }

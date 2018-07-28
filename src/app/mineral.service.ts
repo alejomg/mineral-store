@@ -16,4 +16,10 @@ export class MineralService {
 		return of(MINERALS);
 	}
 
+	getMineral(id: number): Observable<Mineral> {
+		// backticks ( ` ) define a JavaScript template literal for embedding the id.
+		this.messageService.add(`[MineralService]: Mineral id=${id} fetched!`);
+		return of(MINERALS.find(mineral => mineral.id === id));
+	}
+
 }

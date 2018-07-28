@@ -1,6 +1,6 @@
 <h2>Top Minerals</h2>
 <div class="grid grid-pad">
-	<a *ngFor="let mineral of minerals" class="col-1-4">
+	<a *ngFor="let mineral of minerals" class="col-1-4" routerLink="/detail/{{mineral.id}}">
 		<div class="module mineral">
 			<h4>{{mineral.name}}</h4>
 		</div>
