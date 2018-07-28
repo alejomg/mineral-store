@@ -25,7 +25,7 @@ export class MineralComponent implements OnInit {
 
 	getMinerals(): void {
 		this.mineralService.getMinerals().subscribe(
-			minerals => this.minerals = minerals;
+			minerals => this.minerals = minerals
 		);
 	}
 
