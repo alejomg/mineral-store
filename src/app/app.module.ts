@@ -7,13 +7,15 @@ import { MineralComponent } from './mineral/mineral.component';
 import { MineralDetailComponent } from './mineral-detail/mineral-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MineralComponent,
     MineralDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
 	BrowserModule,
